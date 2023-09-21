@@ -64,7 +64,7 @@ for(let membro of team){
   ul.innerHTML += `<li>
     Nome: ${membro.nome} <br>
     Ruolo: ${membro.ruolo} <br>
-    Foto: ${membro.foto} <br>
+    Foto: <img src="img/${membro.foto}" alt="Ciao"> <br>
   </li>`;
 
   console.log('-----------');
