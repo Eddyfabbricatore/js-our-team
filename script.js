@@ -36,7 +36,7 @@ const team = [
   }
 ];
 
-const ul = document.querySelector('ul');
+const row = document.querySelector('.row');
 
 for(let membro of team){
 
@@ -61,11 +61,20 @@ for(let membro of team){
     console.log(membro.foto);
   }
 
-  ul.innerHTML += `<li>
-    Nome: ${membro.nome} <br>
-    Ruolo: ${membro.ruolo} <br>
-    Foto: <img src="img/${membro.foto}" alt="Ciao"> <br>
-  </li>`;
+  row.innerHTML += `
+  <div class="col my-3 p-3" style="flex: auto;">
+    <div class="card w-100" style="border: none;">
+      <div class="card-top w-100">
+        <img src="img/${membro.foto}" alt="Ciao"> <br>
+      </div>
+
+      <div class="card bottom" style="border: none;">
+        <h6 class="mt-3">${membro.nome}</h6> <br>
+        <h6 class="mb-3">${membro.ruolo}</h6> <br>
+      </div>
+    </div>
+  </div>
+  `;
 
   console.log('-----------');
 }
